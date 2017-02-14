@@ -6,13 +6,11 @@ LOCAL_MODULE_TAGS	:= optional
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
-ifeq ($(wildcard $(LOCAL_PATH)/src_effects_priv),)
-LOCAL_SRC_FILES += $(call all-java-files-under, src_effects)
-else
-$(warning *** including private implementations of effects ***)
-LOCAL_AAPT_FLAGS += --rename-manifest-package com.cyngn.audiofx
+# ifeq ($(wildcard $(LOCAL_PATH)/src_effects_priv),)
+# LOCAL_SRC_FILES += $(call all-java-files-under, src_effects)
+# else
 LOCAL_SRC_FILES += $(call all-java-files-under, src_effects_priv)
-endif
+# endif
 
 LOCAL_STATIC_JAVA_LIBRARIES := android-support-v4 org.cyanogenmod.platform.sdk
 
