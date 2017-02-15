@@ -4,6 +4,9 @@ import org.cyanogenmod.audiofx.Constants;
 
 import android.content.Context;
 import android.media.AudioDeviceInfo;
+import android.util.Log;
+
+import java.io.File;
 
 /**
  * Creates an EffectSet appropriate for the current device
